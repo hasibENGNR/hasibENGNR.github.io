@@ -242,12 +242,46 @@ footer { padding: 40px 60px; border-top: 1px solid var(--border); display: flex;
 @media (max-width: 900px) {
   nav { padding: 16px 24px; }
   .nav-links { display: none; }
-  .hero { padding: 100px 24px 60px; flex-direction: column; gap: 36px; }
-  .hero-photo { width: 200px; height: 240px; }
-  section { padding: 70px 24px; }
+  .hero {
+    padding: 100px 20px 60px;
+    flex-direction: column-reverse;
+    gap: 28px;
+    align-items: center;
+    text-align: center;
+  }
+  .hero-content { max-width: 100%; }
+  .hero h1 {
+    font-size: clamp(1.5rem, 7vw, 2.2rem) !important;
+    white-space: normal !important;
+    letter-spacing: -0.5px;
+  }
+  .hero-sub { font-size: 0.95rem; }
+  .hero p { max-width: 100%; font-size: 0.9rem; }
+  .hero-photo { width: 160px; height: 200px; }
+  .hero-photo-wrap { width: 100%; align-items: center; }
+  .hero-buttons { justify-content: center; }
+  .hero-socials { justify-content: center; }
+  .job-types { justify-content: center; }
+  .hero-badge { font-size: 0.72rem; }
+  section { padding: 60px 20px; }
+  .section-title { font-size: 1.8rem; margin-bottom: 36px; }
   .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
-  .full-section > .inner { padding: 0 24px; }
-  footer { padding: 32px 24px; }
+  .full-section > .inner { padding: 0 20px; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .awards-grid { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
+  footer { padding: 32px 20px; }
+  .contact-text h2 { font-size: 1.8rem; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: clamp(1.3rem, 6vw, 1.8rem) !important;
+    white-space: normal !important;
+  }
+  .hero-photo { width: 130px; height: 160px; }
+  .btn-primary, .btn-outline { padding: 11px 20px; font-size: 0.85rem; }
+  .skill-chip { font-size: 0.75rem; padding: 10px 10px; }
 }
 </style>
 </head>
